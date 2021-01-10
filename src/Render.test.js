@@ -5,6 +5,7 @@ import Render from "./Render"
 describe("Rendering", () => {
     it ("Should render all the elements collectly", () => {
         render(<Render />)
-        screen.debug()
+        // screen.debug()
+        screen.debug(screen.getByRole("heading"))
     })
 })
