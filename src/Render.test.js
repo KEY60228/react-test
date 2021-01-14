@@ -14,5 +14,6 @@ describe("Rendering", () => {
         // screen.debug(screen.getByText("Udemy"))
         expect(screen.getByText("Udemy")).toBeTruthy()
         expect(screen.queryByText("Udeeeeemy")).toBeNull()
+        expect(screen.getByTestId("copyright")).toBeTruthy()
     })
 })
