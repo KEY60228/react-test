@@ -5,6 +5,7 @@ import './App.css';
 
 import RenderInput from './RenderInput';
 import FrameworkList from './FrameworkList'
+import MockServer from './MockServer';
 
 function App() {
     const data = [{
@@ -23,6 +24,7 @@ function App() {
         <RenderInput outputConsole={(value) => console.log(value)} />
         <FrameworkList frameworks={data} />
         {/* <FrameworkList /> */}
+        <MockServer />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
