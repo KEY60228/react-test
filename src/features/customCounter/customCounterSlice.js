@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from "axios"
 
-const sleep = (msec) => {
+const sleep = async(msec) => {
     const start = new Date()
     while (new Date() - start < msec);
 }
@@ -13,7 +13,7 @@ export const fetchDummy = createAsyncThunk("fetch/dummy", async(num) => {
 
 export const fetchJson = createAsyncThunk("fetch/api", async() => {
     const res = await axios.get("https://jsonplaceholder.typicode.com/users/1")
-    const { usename } = res.data
+    const { username } = res.data
     return username
 })
 
